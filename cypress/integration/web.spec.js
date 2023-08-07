@@ -1,0 +1,61 @@
+require('cypress-xpath')
+
+describe('Funcionalidade: Botões verticais', () => {
+ 
+  it('Devo clicar nos botões verticais', () => {
+    cy.clicarNoBotãoAzul()
+    cy.clicarNoBotãoVermelho()
+    cy.clicarNoBotãoVerde()
+  })
+})
+
+describe('Funcionalidade: Botão de Editar e Deletar', () => {
+  beforeEach(() => {
+    cy.visit('/challenging_dom')
+  })
+
+  it('Devo conseguir clicar no botão de editar em todos os itens do grid', () => {
+    cy.clicarEmEditarNoItem(1)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(2)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(3)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(4)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(5)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(6)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(7)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(8)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(9)
+    cy.validarUrl()
+    cy.clicarEmEditarNoItem(10)
+    cy.validarUrl()
+  })
+
+  it('Devo conseguir clicar no botão de Deletar em todos os itens do grid', () => {
+    cy.clicarEmDeletarNoItem(1)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(2)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(3)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(4)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(5)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(6)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(7)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(8)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(9)
+    cy.validarUrlDelete()
+    cy.clicarEmDeletarNoItem(10)
+  })
+})

@@ -1,0 +1,17 @@
+{
+    "baseUrl": "https://the-internet.herokuapp.com",
+    "integrationFolder": "cypress/integration",
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "reporterEnabled": "mochawesome",
+        "mochawesomeReporterOptions":{
+        "reportTitle": "Case Técnico Banco Paraná",
+        "reportDir": "cypress/report/mochawesome-report",
+        "quite": true,
+        "overwrite": true,
+        "html": true,
+        "json": false,
+        "timestamp": "mmddyyyy_HHMMss"
+        }
+    }      
+}
